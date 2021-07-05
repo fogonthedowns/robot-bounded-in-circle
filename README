@@ -1,0 +1,19 @@
+Input: instructions = "GGLLGG"
+Output: true
+Explanation: The robot moves from (0,0) to (0,2), turns 180 degrees, and then returns to (0,0).
+When repeating these instructions, the robot remains in the circle of radius 2 centered at the origin.
+
+Input: instructions = "GG"
+Output: false
+Explanation: The robot moves north indefinitely.
+
+Input: instructions = "GL"
+Output: true
+Explanation: The robot moves from (0, 0) -> (0, 1) -> (-1, 1) -> (-1, 0) -> (0, 0) -> ...
+
+----
+
+We do not need to run 4 cycles to identify the limit cycle trajectory. One cycle is enough. There could be two situations here.
+
+  1. First, if the robot returns to the initial point after one cycle, that's the limit cycle trajectory.
+  2. Second, if the robot doesn't face north at the end of the first cycle, that's the limit cycle trajectory. Once again, that's the consequence of the plane symmetry for the repeated cycles [proof].
