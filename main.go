@@ -14,6 +14,7 @@ func isRobotBounded(instructions string) bool {
 
 	for _, v := range instructions {
 		if v == 'L' {
+			// Modulo here is needed to deal with the situation - facing west, idx = 3, turn to the right to face north, idx = 0
 			// west
 			index = (index + 3) % 4
 		} else if v == 'R' {
