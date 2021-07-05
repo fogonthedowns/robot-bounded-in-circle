@@ -1,3 +1,9 @@
+robot-bounded-in-circle
+----
+
+O(N) time complexity
+O(1) space complexity
+
 Input: instructions = "GGLLGG"
 Output: true
 Explanation: The robot moves from (0,0) to (0,2), turns 180 degrees, and then returns to (0,0).
